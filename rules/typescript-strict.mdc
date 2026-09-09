@@ -1,0 +1,25 @@
+# TypeScript Strict Mode
+
+## Principle
+Enable strict TypeScript for safer code.
+
+## Guidelines
+- Set `"strict": true` in tsconfig.json
+- Use explicit return types on public APIs
+- Avoid `any`; prefer `unknown` with type guards
+- Enable `noUncheckedIndexedAccess`
+- Use Astro's type definitions for frontmatter
+
+## tsconfig.json
+```json
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "noImplicitAny": true
+  }
+}
+```
+
+## Benefits
+Catch errors at compile time, better refactoring support.

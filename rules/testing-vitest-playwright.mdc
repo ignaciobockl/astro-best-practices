@@ -1,0 +1,26 @@
+# Testing with Vitest and Playwright
+
+## Principle
+Test units, components, and E2E flows.
+
+## Guidelines
+- Use Vitest for unit and component tests
+- Use Playwright for E2E and accessibility tests
+- Mock Astro content collections in tests
+- Test islands hydration behavior
+- Aim for >80% coverage on critical paths
+
+## Setup
+```ts
+// vitest.config.ts
+export default {
+  test: {
+    environment: 'node',
+  }
+};
+```
+
+## Best Practices
+- Test static generation output
+- Verify accessibility with axe-core
+- Run tests in CI on every PR

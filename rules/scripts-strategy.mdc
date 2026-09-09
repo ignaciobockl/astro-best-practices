@@ -1,0 +1,27 @@
+# Scripts Strategy
+
+## Principle
+Load scripts efficiently with minimal impact.
+
+## Guidelines
+- Prefer inline scripts for critical functionality
+- Use `type="module"` for modern browsers
+- Defer non-critical scripts with `async` or `defer`
+- Scope scripts to components with `is:inline`
+- Avoid global namespace pollution
+
+## Example
+```astro
+<script>
+  // Runs only on client
+  console.log('Component mounted');
+</script>
+
+<script is:inline>
+  // Inline in final HTML
+  window.dataLayer = window.dataLayer || [];
+</script>
+```
+
+## Security
+Sanitize dynamic script content. Avoid `innerHTML`.

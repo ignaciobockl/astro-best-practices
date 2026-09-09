@@ -1,0 +1,23 @@
+# SEO and Core Web Vitals
+
+## Principle
+Optimize for search engines and user experience metrics.
+
+## Guidelines
+- Use semantic HTML: header, main, nav, footer
+- Generate dynamic sitemaps and robots.txt
+- Set proper meta tags: title, description, og, twitter
+- Ensure LCP < 2.5s, INP < 200ms, CLS < 0.1
+- Preload critical fonts and resources
+
+## Astro Specific
+```astro
+---
+export const prerender = true;
+---
+```
+
+Use `ViewTransitions` for smooth navigation without hurting CLS.
+
+## Monitoring
+Track Web Vitals with web-vitals library in production.

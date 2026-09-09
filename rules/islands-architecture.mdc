@@ -1,0 +1,21 @@
+# Islands Architecture
+
+## Principle
+Use Astro Islands for interactive components only. Keep pages mostly static.
+
+## Guidelines
+- Default components to static rendering
+- Mark interactive components with `client:load`, `client:idle`, `client:visible` as needed
+- Avoid hydration on pages without user interaction
+- Split large islands into smaller units
+
+## Anti-pattern
+Hydrating entire page components unnecessarily.
+
+## Example
+```astro
+---
+// Static content renders at build time
+---
+<IslandComponent client:visible />
+```

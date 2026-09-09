@@ -1,0 +1,30 @@
+# View Transitions Accessibility
+
+## Principle
+View Transitions enhance UX but must remain accessible.
+
+## Guidelines
+- Respect `prefers-reduced-motion`
+- Ensure focus management after transition
+- Provide fallback for browsers without support
+- Keep transition durations under 500ms
+- Announce route changes to screen readers
+
+## Implementation
+```astro
+---
+import { viewTransitions } from 'astro:transitions';
+---
+<html>
+  <head>
+    <viewTransitions />
+  </head>
+</html>
+```
+
+Use CSS media query:
+```css
+@media (prefers-reduced-motion: reduce) {
+  * { view-transition-name: none !important; }
+}
+```

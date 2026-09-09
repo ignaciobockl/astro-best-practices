@@ -1,0 +1,35 @@
+metrics:
+  - name: islands_hydration_ratio
+    description: Percentage of components hydrated vs static
+    target: < 15%
+    type: percentage
+
+  - name: build_time
+    description: Production build duration
+    target: < 60s
+    type: seconds
+
+  - name: lcp
+    description: Largest Contentful Paint
+    target: < 2500ms
+    type: milliseconds
+
+  - name: inp
+    description: Interaction to Next Paint
+    target: < 200ms
+    type: milliseconds
+
+  - name: cls
+    description: Cumulative Layout Shift
+    target: < 0.1
+    type: score
+
+  - name: test_coverage
+    description: Code coverage percentage
+    target: > 80%
+    type: percentage
+
+  - name: typescript_errors
+    description: Number of TypeScript errors
+    target: 0
+    type: count

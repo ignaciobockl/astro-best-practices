@@ -1,0 +1,25 @@
+# Content Collections with Zod
+
+## Principle
+Define strict schemas for content collections using Zod for type safety and validation.
+
+## Guidelines
+- Use `defineCollection` with `z.object` schema
+- Validate dates, slugs, and required fields
+- Use `.transform()` for derived values
+- Enable `strictMode` in Astro config
+
+## Example
+```ts
+import { defineCollection, z } from 'astro:content';
+export const blog = defineCollection({
+  schema: z.object({
+    title: z.string().min(1),
+    pubDate: z.date(),
+    draft: z.boolean().default(false),
+  })
+});
+```
+
+## Benefits
+Compile-time errors for invalid content, better IDE support.

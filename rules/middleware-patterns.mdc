@@ -1,0 +1,22 @@
+# Middleware Patterns
+
+## Principle
+Use Astro middleware for cross-cutting concerns: auth, redirects, headers.
+
+## Guidelines
+- Keep middleware lightweight and synchronous where possible
+- Avoid heavy I/O in middleware
+- Use `context.locals` for request-scoped data
+- Handle errors with try/catch and proper status codes
+
+## Example
+```ts
+export const onRequest = async (context, next) => {
+  const response = await next();
+  response.headers.set('X-Frame-Options', 'DENY');
+  return response;
+};
+```
+
+## Security
+Never store secrets in middleware code. Use environment variables.

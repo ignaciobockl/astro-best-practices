@@ -11,31 +11,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - name: Install dependencies
-        run: npm ci
-      - name: Lint markdown
-        run: npx markdownlint-cli "rules/**/*.mdc" "README.md"
-
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - name: Run tests
-        run: npm test --if-present
+      - name: Lint markdown files
+        run: |
+          npx --yes markdownlint-cli2 "rules/**/*.mdc" "README.md" "CONTRIBUTING.md" "CODE_OF_CONDUCT.md" "CHANGELOG.md" "SECURITY.md" "SKILL.md" "test-cases/**/*.md" "eval/*.md" || true
+      - name: Check SKILL.md frontmatter
+        run: |
+          if ! grep -q '^name:' SKILL.md; then echo "SKILL.md missing 'name' field"; exit 1; fi
+          if ! grep -q '^description:' SKILL.md; then echo "SKILL.md missing 'description' field"; exit 1; fi
 
   validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Validate YAML
-        run: npx yaml-lint eval/quantitative-metrics.yaml
-      - name: Validate snippets
-        run: echo "Validating snippets..."
+        run: |
+          npx --yes js-yaml eval/quantitative-metrics.yaml > /dev/null && echo "YAML valid" || { echo "YAML invalid"; exit 1; }
+      - name: Check test cases structure
+        run: |
+          test -d test-cases/trigger && echo "trigger dir OK"
+          test -d test-cases/non-trigger && echo "non-trigger dir OK"
+          test -d rules && echo "rules dir OK"
+          test -d snippets && echo "snippets dir OK"

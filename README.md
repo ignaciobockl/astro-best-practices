@@ -30,8 +30,7 @@ astro-best-practices/
 ├── test-cases/     # Trigger / non-trigger examples
 │   ├── trigger/    # Good patterns
 │   └── non-trigger/# Anti-patterns
-├── eval/           # Evaluation criteria
-└── docs/           # Additional documentation
+└── eval/           # Evaluation criteria
 ```
 
 ## Quick Start

@@ -1,8 +1,10 @@
-# Astro Best Practices
-
+---
 name: astro-best-practices
 description: A comprehensive skill for building production-ready Astro applications following modern best practices for performance, accessibility, SEO, and maintainability.
 license: MIT
+---
+
+# Astro Best Practices
 
 ## Overview
 

@@ -18,7 +18,7 @@
 - **Poor**: No a11y considerations
 
 ### Performance
-- **Excellent**: LCP <2s, INP <200ms, CLS <0.1
+- **Excellent**: LCP <2.5s, INP <200ms, CLS <0.1
 - **Good**: Meets thresholds with minor issues
 - **Poor**: Fails Core Web Vitals
 

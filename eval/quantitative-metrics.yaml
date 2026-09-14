@@ -24,8 +24,8 @@ metrics:
     target: < 0.1
     type: score
 
-  - name: test_coverage
-    description: Code coverage percentage
+  - name: snippets_with_tests
+    description: Percentage of snippets/rules that have an associated test case
     target: "> 80%"
     type: percentage
 

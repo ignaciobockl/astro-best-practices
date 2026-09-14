@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Restructured repo to canonical `skills/astro-best-practices/` layout for `npx skills add` CLI compatibility (moved `SKILL.md`, `rules/`, `snippets/`, `test-cases/`, `eval/` with `git mv` to preserve history)
+- Updated `.github/workflows/ci.yml` paths and `README.md` structure/references to new skill location
+
 ## [0.1.0] - 2026-09-09
 
 ### Added

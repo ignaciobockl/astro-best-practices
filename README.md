@@ -25,20 +25,23 @@ This repository provides reusable guidelines for:
 
 ```
 astro-best-practices/
-├── rules/          # Best practice rules and explanations
-├── snippets/       # Copy-paste ready code snippets
-├── test-cases/     # Trigger / non-trigger examples
-│   ├── trigger/    # Good patterns
-│   └── non-trigger/# Anti-patterns
-└── eval/           # Evaluation criteria
+├── skills/
+│   └── astro-best-practices/  # Skill package (npx skills compatible)
+│       ├── SKILL.md           # Skill definition and frontmatter
+│       ├── rules/             # Best practice rules and explanations
+│       ├── snippets/          # Copy-paste ready code snippets
+│       ├── test-cases/        # Trigger / non-trigger examples
+│       │   ├── trigger/       # Good patterns
+│       │   └── non-trigger/   # Anti-patterns
+│       └── eval/              # Evaluation criteria
 ```
 
 ## Quick Start
 
-1. Review the `rules/` directory for detailed best practices
-2. Copy snippets from `snippets/` into your project
+1. Review the `skills/astro-best-practices/rules/` directory for detailed best practices
+2. Copy snippets from `skills/astro-best-practices/snippets/` into your project
 3. Use test cases to validate implementations
-4. Apply evaluation criteria from `eval/`
+4. Apply evaluation criteria from `skills/astro-best-practices/eval/`
 
 ### Example: Content Collection
 
@@ -70,7 +73,7 @@ import Counter from '../components/Counter.jsx';
 
 ## Examples
 
-See `test-cases/trigger/` for examples that follow best practices and `test-cases/non-trigger/` for common anti-patterns.
+See `skills/astro-best-practices/test-cases/trigger/` for examples that follow best practices and `skills/astro-best-practices/test-cases/non-trigger/` for common anti-patterns.
 
 ## Contributing
 

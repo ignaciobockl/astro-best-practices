@@ -1,7 +1,8 @@
 # Astro Best Practices
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE.md)
-[![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](./CHANGELOG.md)
+[![skills.sh](https://skills.sh/b/ignaciobockl/astro-best-practices)](https://skills.sh/ignaciobockl/astro-best-practices)
+[![Version](https://img.shields.io/badge/version-0.2.1-blue.svg)](./CHANGELOG.md)
 [![Contributing](https://img.shields.io/badge/contributions-welcome-green.svg)](./CONTRIBUTING.md)
 [![Code of Conduct](https://img.shields.io/badge/code%20of%20conduct-enforced-blue.svg)](./CODE_OF_CONDUCT.md)
 
@@ -42,6 +43,11 @@ astro-best-practices/
 2. Copy snippets from `skills/astro-best-practices/snippets/` into your project
 3. Use test cases to validate implementations
 4. Apply evaluation criteria from `skills/astro-best-practices/eval/`
+
+**SKILL.md new sections (v0.2.1+):**
+- `When to use` — explicit scenarios for this skill
+- `Example` — minimal type-safe content collection + island component
+- `Badges` — version, license, CI status
 
 ### Example: Content Collection
 
